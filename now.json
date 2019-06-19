@@ -1,6 +1,5 @@
 {
   "version": 2,
   "name": "bot",
- "version": 2,
   "builds": [{ "src": "date.js", "use": "@now/node" }]
 }
