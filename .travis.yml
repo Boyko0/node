@@ -1,1 +1,10 @@
 language: node_js
+node_js:
+  - "10.15.3"
+cache: npm
+install:
+  - npm install
+script: 
+  - npm test
+  - npm build
+  - now --token=$ZEIT_KEY -e BOT_TOKEN=$BOT_TOKEN
