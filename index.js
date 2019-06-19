@@ -1,11 +1,11 @@
 'use strict';
 
-const Telegraf = require('telegraf');
+const TelegramBot = require('node-telegram-bot-api');
 const intervals = require(__dirname + '/src/intervals.js');
 const gbScraper = require(__dirname + '/src/gb-scraper.js');
 const messages = require(__dirname + '/src/messages.json');
 
-const BOT_TOKEN = new Telegraf("842898624:AAHr8uaMOeFu3G11LRCqBA4rFc_yXf1rw80", { webhookReply: false });
+const BOT_TOKEN = new TelegramBot("842898624:AAHr8uaMOeFu3G11LRCqBA4rFc_yXf1rw80", { webhookReply: false });
 
 const MILISECONDS_IN_ONE_HOUR = 3600000;
 
