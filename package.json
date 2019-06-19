@@ -6,7 +6,8 @@
   "dependencies": {
     "jsdom": "^15.1.0",
     "node-fetch": "^2.6.0",
-    "node-telegram-bot-api": "^0.30.0"
+    "node-telegram-bot-api": "^0.30.0",
+    "now": "^15.5.0"
   },
   "devDependencies": {},
   "scripts": {
