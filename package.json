@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "jsdom": "^15.1.0",
-    "node-fetch": "^2.6.0",
-    "node-telegram-bot-api": "^0.30.0",
-    "now": "^15.5.0"
+    "bufferutil": "^4.0.1",
+    "canvas": "^2.5.0",
+    "dotenv": "^8.0.0",
+    "encoding": "^0.1.12",
+    "jsdom": "^15.1.1",
+    "telegraf": "^3.30.1",
+    "utf-8-validate": "^5.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "localtunnel": "^1.9.1",
+    "now": "^15.3.0"
+  },
   "scripts": {
     "start": "node index.js",
     "deploy": "node index.js",
@@ -25,18 +31,5 @@
   "bugs": {
     "url": "https://github.com/Boyko0/gb-bot/issues"
   },
-  "homepage": "https://github.com/Boyko0/gb-bot#readme",
-  "devDependencies": {
-    "localtunnel": "^1.9.1",
-    "now": "^15.3.0"
-  },
-  "dependencies": {
-    "bufferutil": "^4.0.1",
-    "canvas": "^2.5.0",
-    "dotenv": "^8.0.0",
-    "encoding": "^0.1.12",
-    "jsdom": "^15.1.1",
-    "telegraf": "^3.29.0",
-    "utf-8-validate": "^5.0.2"
-  }
+  "homepage": "https://github.com/Boyko0/gb-bot#readme"
 }

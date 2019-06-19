@@ -4,11 +4,8 @@ const TelegramBot = require('node-telegram-bot-api');
 const intervals = require(__dirname + '/src/intervals.js');
 const gbScraper = require(__dirname + '/src/gb-scraper.js');
 const messages = require(__dirname + '/src/messages.json');
-
-const BOT_TOKEN = new TelegramBot("842898624:AAHr8uaMOeFu3G11LRCqBA4rFc_yXf1rw80", { webhookReply: false });
-
+const BOT_TOKEN = "702026635:AAEj0m2nghDXGnYS1T-laT9IaidJKdZu7bg";
 const MILISECONDS_IN_ONE_HOUR = 3600000;
-
 const intervalsObjects = [];
 
 const sendResults = async (chatId, msgId) => {
@@ -26,7 +23,8 @@ const sendResults = async (chatId, msgId) => {
 
 intervals.start(sendResults);
 
-const bot = new TelegramBot(BOT_TOKEN, { polling: true });
+const bot = new TelegramBot(BOT_TOKEN, {polling:true});
+
 
 bot.onText(/\/now/, async msg => {
   sendResults(msg.chat.id, msg.message_id);
