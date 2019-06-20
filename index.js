@@ -31,7 +31,7 @@ const options = {
   }
 };
 
-const bot = new TelegramBot(BOT_TOKEN,options);
+const bot = new TelegramBot(BOT_TOKEN, options);
 
 
 bot.onText(/\/now/, async msg => {
