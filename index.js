@@ -23,9 +23,15 @@ const sendResults = async (chatId, msgId) => {
 
 intervals.start(sendResults);
 
-let url = "https://bot.alex2000boyko.now.sh/";
+let url = "https://bot.alex2000boyko.now.sh";
 
-const bot = new TelegramBot(BOT_TOKEN,{polling:true});
+const options = {
+  webHook: {
+    port: 8443
+  }
+};
+
+const bot = new TelegramBot(BOT_TOKEN,options);
 
 
 bot.onText(/\/now/, async msg => {
@@ -51,4 +57,4 @@ bot.onText(/\/stop.+/, msg => {
   }
   bot.sendMessage(msg.chat.id, messages.STOP_MAILING);
 });
-bot.setwebhook(`${url}/bot${BOT_TOKEN}`);
+bot.setWebHook(`${url}/bot${BOT_TOKEN}`);
