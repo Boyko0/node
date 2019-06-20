@@ -7,9 +7,9 @@ const messages = require(__dirname + '/src/messages.json');
 const BOT_TOKEN = "702026635:AAEj0m2nghDXGnYS1T-laT9IaidJKdZu7bg";
 const MILISECONDS_IN_ONE_HOUR = 3600000;
 const intervalsObjects = [];
-
+{}
 const sendResults = async (chatId, msgId) => {
-  const result = `${await gbScraper(2147)}/${await gbScraper(2149)}`;
+  const result = `${await gbScraper(202)}/${await gbScraper(2134)}`;
   if (msgId !== undefined) {
     bot.sendMessage(
       chatId,
@@ -23,7 +23,9 @@ const sendResults = async (chatId, msgId) => {
 
 intervals.start(sendResults);
 
-const bot = new TelegramBot(BOT_TOKEN, {polling:true});
+let url = "https://bot.alex2000boyko.now.sh/";
+
+const bot = new TelegramBot(BOT_TOKEN,{polling:true});
 
 
 bot.onText(/\/now/, async msg => {
@@ -49,3 +51,4 @@ bot.onText(/\/stop.+/, msg => {
   }
   bot.sendMessage(msg.chat.id, messages.STOP_MAILING);
 });
+bot.setwebhook(`${url}/bot${BOT_TOKEN}`);
